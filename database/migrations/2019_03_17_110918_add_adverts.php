@@ -17,17 +17,24 @@ class AddAdverts extends Migration
         $advertTable = (new \App\Advert())->getTable();
         $userExtendedTable = (new \App\UserExtended())->getTable();
 
-        Schema::create($advertTable, function(Blueprint $blueprint) use ($userExtendedTable, $advertCategoryTable)
-        {
-            $blueprint->string('title');
-            $blueprint->text('description');
-            $blueprint->foreign('category')->references('id')->on($advertCategoryTable);
-            $blueprint->foreign('user')->references('id')->on($userExtendedTable);
+        Schema::create($advertCategoryTable, function (Blueprint $blueprint) {
+            $blueprint->bigIncrements('id');
+            $blueprint->string('name');
+            $blueprint->timestamps();
         });
 
-        Schema::create($advertCategoryTable, function(Blueprint $blueprint)
-        {
-           $blueprint->string('name');
+        Schema::create($advertTable, function (Blueprint $blueprint) use ($userExtendedTable, $advertCategoryTable) {
+            $blueprint->bigIncrements('id');
+
+            $blueprint->string('title');
+            $blueprint->text('description');
+            $blueprint->timestamps();
+
+            $blueprint->unsignedBigInteger('category');
+            $blueprint->foreign('category')->references('id')->on($advertCategoryTable)->onDelete('cascade');
+
+            $blueprint->unsignedBigInteger('user');
+            $blueprint->foreign('user')->references('id')->on($userExtendedTable)->onDelete('cascade');
         });
 
     }
@@ -39,6 +46,14 @@ class AddAdverts extends Migration
      */
     public function down()
     {
-        //
+        $advertCategoryTable = (new \App\AdvertCategory())->getTable();
+        $advertTable = (new \App\Advert())->getTable();
+
+        Schema::disableForeignKeyConstraints();
+
+        Schema::dropIfExists($advertCategoryTable);
+        Schema::dropIfExists($advertTable);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

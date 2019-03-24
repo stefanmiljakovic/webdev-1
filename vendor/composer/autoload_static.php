@@ -432,9 +432,14 @@ class ComposerStaticInit5ef3dfabad17baada8b1b26582c17b32
     );
 
     public static $classMap = array (
+        'App\\Advert' => __DIR__ . '/../..' . '/app/Advert.php',
+        'App\\AdvertCategory' => __DIR__ . '/../..' . '/app/AdvertCategory.php',
+        'App\\AdvertHasCategories' => __DIR__ . '/../..' . '/app/AdvertHasCategories.php',
+        'App\\AdvertImage' => __DIR__ . '/../..' . '/app/AdvertImage.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Helper\\BladeArguments' => __DIR__ . '/../..' . '/app/Helper/BladeArguments.php',
+        'App\\Http\\Controllers\\Adverts\\AdvertCategory' => __DIR__ . '/../..' . '/app/Http/Controllers/Adverts/AdvertCategory.php',
         'App\\Http\\Controllers\\Auth\\Extended\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/Extended/LoginController.php',
         'App\\Http\\Controllers\\Auth\\Extended\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/Extended/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -459,6 +464,7 @@ class ComposerStaticInit5ef3dfabad17baada8b1b26582c17b32
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Rules\\PhoneNumber' => __DIR__ . '/../..' . '/app/Rules/PhoneNumber.php',
         'App\\Rules\\Username' => __DIR__ . '/../..' . '/app/Rules/Username.php',
+        'App\\TreeModel\\TreeModel' => __DIR__ . '/../..' . '/app/Traits/TreeModel.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\UserExtended' => __DIR__ . '/../..' . '/app/UserExtended.php',
         'Barryvdh\\LaravelIdeHelper\\Alias' => __DIR__ . '/..' . '/barryvdh/laravel-ide-helper/src/Alias.php',

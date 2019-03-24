@@ -6,9 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Advert' => $baseDir . '/app/Advert.php',
+    'App\\AdvertCategory' => $baseDir . '/app/AdvertCategory.php',
+    'App\\AdvertHasCategories' => $baseDir . '/app/AdvertHasCategories.php',
+    'App\\AdvertImage' => $baseDir . '/app/AdvertImage.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Helper\\BladeArguments' => $baseDir . '/app/Helper/BladeArguments.php',
+    'App\\Http\\Controllers\\Adverts\\AdvertCategory' => $baseDir . '/app/Http/Controllers/Adverts/AdvertCategory.php',
     'App\\Http\\Controllers\\Auth\\Extended\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/Extended/LoginController.php',
     'App\\Http\\Controllers\\Auth\\Extended\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/Extended/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -33,6 +38,7 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Rules\\PhoneNumber' => $baseDir . '/app/Rules/PhoneNumber.php',
     'App\\Rules\\Username' => $baseDir . '/app/Rules/Username.php',
+    'App\\TreeModel\\TreeModel' => $baseDir . '/app/Traits/TreeModel.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\UserExtended' => $baseDir . '/app/UserExtended.php',
     'Barryvdh\\LaravelIdeHelper\\Alias' => $vendorDir . '/barryvdh/laravel-ide-helper/src/Alias.php',

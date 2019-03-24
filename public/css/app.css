@@ -10664,3 +10664,19 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+#advert-route .category-tree li.dropped + ul {
+  display: none;
+}
+
+#advert-route .category-tree ul {
+  transition: all 0.3s ease-in-out;
+  overflow-y: hidden;
+  line-height: 1.5;
+}
+
+#advert-route .category-tree li {
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+  cursor: pointer;
+}
+

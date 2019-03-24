@@ -14,3 +14,22 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+#advert-route {
+  .category-tree {
+    li.dropped + ul {
+      display: none;
+    }
+
+    ul {
+      transition: all .3s ease-in-out;
+      overflow-y: hidden;
+      line-height: 1.5;
+    }
+    li {
+      transition: all .3s ease-in-out;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
